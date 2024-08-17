@@ -1,11 +1,12 @@
 import NextAuth from 'next-auth';
-import Providers from 'next-auth/providers';
+import CredentialsProvider from 'next-auth/providers/credentials';
 import { SequelizeAdapter } from '@next-auth/sequelize-adapter';
-import { sequelize } from '../../../models';
+import db from '../../../models';
+const {sequelize} = db;
 
 export default NextAuth({
     providers: [
-        Providers.Credentials({
+        CredentialsProvider({
             name: 'Credentials',
             credentials: {
                 username: { label: "Username", type: "text" },
@@ -25,7 +26,7 @@ export default NextAuth({
         jwt: true,
     },
     callbacks: {
-        async session(session, user) {
+        async session({ session, user }) {
             session.user.id = user.id;
             session.user.username = user.username;
             return session;

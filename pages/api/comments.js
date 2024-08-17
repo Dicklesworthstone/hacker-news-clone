@@ -1,11 +1,11 @@
 import nc from 'next-connect';
-import { Comment, User, Post } from '../../models';
-import logger from '../../utils/logger';
+import db from '../../models';
+const { Comment, User, Post } = db;
+import serverLogger from '../../utils/server-logger';
 import { getCachedData, setCachedData } from '../../utils/cache';
 import { body, validationResult } from 'express-validator';
 
 const handler = nc()
-    // Middleware for input validation
     .use(
         body('postId').isInt().withMessage('Post ID is required and must be an integer'),
         body('authorId').isInt().withMessage('Author ID is required and must be an integer'),
@@ -34,19 +34,24 @@ const handler = nc()
                     where: { postId },
                     include: [
                         { model: User, as: 'author', attributes: ['username'] },
-                        { model: Comment, as: 'replies', include: [{ model: User, as: 'author', attributes: ['username'] }] },
+                        {
+                            model: Comment, 
+                            as: 'replies', 
+                            include: [{ model: User, as: 'author', attributes: ['username'] }],
+                            limit: 10  // Limit replies to prevent too deep recursion
+                        },
                     ],
                 });
 
                 setCachedData(cacheKey, comments); // Cache the comments
-                logger.info(`Comments for post ${postId} fetched from database and cached`);
+                serverLogger.info(`Comments for post ${postId} fetched from database and cached`);
             } else {
-                logger.info(`Serving comments for post ${postId} from cache`);
+                serverLogger.info(`Serving comments for post ${postId} from cache`);
             }
 
             res.status(200).json(comments);
         } catch (error) {
-            logger.error(`Error fetching comments for post ${postId}: ${error.message}`);
+            serverLogger.error(`Error fetching comments for post ${postId}: ${error.message}`);
             res.status(500).json({ error: 'Internal server error' });
         }
     })
@@ -72,11 +77,11 @@ const handler = nc()
             const cacheKey = `comments-post-${postId}`;
             setCachedData(cacheKey, null);
 
-            logger.info(`New comment created by user ${user.username} on post ${postId}`);
+            serverLogger.info(`New comment created by user ${user.username} on post ${postId}`);
 
             res.status(201).json(comment);
         } catch (error) {
-            logger.error(`Error creating comment: ${error.message}`);
+            serverLogger.error(`Error creating comment: ${error.message}`);
             res.status(500).json({ error: 'Internal server error' });
         }
     });

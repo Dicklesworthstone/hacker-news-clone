@@ -1,3 +1,5 @@
+'use client';
+
 import { useQuery } from 'react-query';
 import { List, Typography, Spin, Alert, Card, Button } from 'antd';
 import { LikeOutlined, UserOutlined, LoadingOutlined } from '@ant-design/icons';

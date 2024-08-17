@@ -1,5 +1,5 @@
 import nc from 'next-connect';
-import logger from '../../utils/logger';
+import serverLogger from '../../utils/server-logger';  // Corrected import path
 import { getCachedData, setCachedData } from '../../utils/cache';
 
 const handler = nc()
@@ -22,14 +22,14 @@ const handler = nc()
 
                 // Cache the API info to avoid regenerating on every request
                 setCachedData(cacheKey, apiInfo);
-                logger.info('API info generated and cached');
+                serverLogger.info('API info generated and cached');
             } else {
-                logger.info('Serving API info from cache');
+                serverLogger.info('Serving API info from cache');
             }
 
             res.status(200).json(apiInfo);
         } catch (error) {
-            logger.error(`Error fetching API info: ${error.message}`);
+            serverLogger.error(`Error fetching API info: ${error.message}`);
             res.status(500).json({ error: 'Internal server error' });
         }
     });

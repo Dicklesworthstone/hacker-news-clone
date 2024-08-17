@@ -1,5 +1,6 @@
 import nc from 'next-connect';
-import { Post, User, Upvote } from '../../../../models';
+import db from '../../../../models';
+const {Post, User, Upvote } = db;
 
 const handler = nc()
     .put(async (req, res) => {

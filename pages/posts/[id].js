@@ -1,8 +1,11 @@
+'use client';
+
 import { useRouter } from 'next/router';
 import { useQuery } from 'react-query';
 import axios from 'axios';
-import { Typography, Spin, Alert, List, Comment, Avatar, Card } from 'antd';
+import { Avatar, Card, List, Spin, Typography, Alert } from 'antd';
 import { UserOutlined, LoadingOutlined } from '@ant-design/icons';
+import Comment from '../../components/Comment';  // Make sure this file also has 'use client'
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -51,13 +54,11 @@ export default function Post() {
                     itemLayout="horizontal"
                     dataSource={post.comments}
                     renderItem={comment => (
-                        <Comment
-                            key={comment.id}
-                            author={comment.author.username}
-                            avatar={<Avatar icon={<UserOutlined />} />}
-                            content={comment.content}
-                            className="bg-white rounded-lg p-4 shadow-sm"
-                        />
+                        <Comment key={comment.id} comment={comment}>
+                            {comment.children && comment.children.map(childComment => (
+                                <Comment key={childComment.id} comment={childComment} />
+                            ))}
+                        </Comment>
                     )}
                 />
             </Card>

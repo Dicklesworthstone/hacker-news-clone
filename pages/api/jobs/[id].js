@@ -1,5 +1,6 @@
 import nc from 'next-connect';
-import { Job } from '../../../models';
+import db from '../../../models';
+const {Job} = db;
 import { getCachedData, setCachedData } from '../../../utils/cache';  // Import the cache utilities
 
 const handler = nc()

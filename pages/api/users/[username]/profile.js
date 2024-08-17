@@ -1,6 +1,7 @@
 import nc from 'next-connect';
-import { User } from '../../../../models';
-import logger from '../../../../utils/logger';
+import db from '../../../../models';
+const {User} = db;
+import serverLogger from '../../../../utils/server-logger';  // Corrected import path
 import { getCachedData, setCachedData } from '../../../../utils/cache';
 
 const handler = nc()
@@ -26,21 +27,21 @@ const handler = nc()
 
                 // If the user is not found, log it and return a 404
                 if (!user) {
-                    logger.warn(`User not found: ${username}`);
+                    serverLogger.warn(`User not found: ${username}`);
                     return res.status(404).json({ error: 'User not found' });
                 }
 
                 // Cache the user profile data
                 setCachedData(cacheKey, user);
-                logger.info(`User profile for ${username} fetched from database and cached`);
+                serverLogger.info(`User profile for ${username} fetched from database and cached`);
             } else {
-                logger.info(`Serving user profile for ${username} from cache`);
+                serverLogger.info(`Serving user profile for ${username} from cache`);
             }
 
             // Return the user profile data
             res.status(200).json(user);
         } catch (error) {
-            logger.error(`Error fetching user profile for ${username}: ${error.message}`);
+            serverLogger.error(`Error fetching user profile for ${username}: ${error.message}`);
             res.status(500).json({ error: 'Internal server error' });
         }
     });

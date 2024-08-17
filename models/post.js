@@ -3,23 +3,29 @@ const { Model } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   class Post extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
-      // define association here
       Post.belongsTo(models.User, { as: 'author', foreignKey: 'authorId' });
-      Post.hasMany(models.Comment, { foreignKey: 'postId' });
-      Post.hasMany(models.Upvote, { foreignKey: 'postId' });
+      Post.hasMany(models.Comment, { foreignKey: 'postId', onDelete: 'CASCADE' });
+      Post.hasMany(models.Upvote, { foreignKey: 'postId', onDelete: 'CASCADE' });
+      Post.belongsTo(models.Category, { foreignKey: 'categoryId' });
+      Post.belongsToMany(models.Tag, { through: 'PostTag', foreignKey: 'postId' });
+      Post.hasMany(models.Flag, { foreignKey: 'postId' });
     }
   }
 
   Post.init({
-    title: DataTypes.STRING,
-    content: DataTypes.TEXT,
-    authorId: DataTypes.INTEGER,
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    content: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    authorId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     upvotes: {
       type: DataTypes.INTEGER,
       defaultValue: 0,
@@ -28,10 +34,14 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       defaultValue: 0,
     },
-    tags: DataTypes.STRING,
+    tags: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     category: {
       type: DataTypes.ENUM('Show HN', 'Ask HN', 'Job', 'General'),
       defaultValue: 'General',
+      allowNull: false,
     },
   }, {
     sequelize,

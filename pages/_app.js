@@ -1,12 +1,17 @@
-import "@/styles/globals.css";
+'use client';import '../styles/globals.css'; // Adjusted the path to relative
+
 import ErrorBoundary from '../components/ErrorBoundary';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { httpLogger } from '../utils/logger';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ConfigProvider } from 'antd';
+import dynamic from 'next/dynamic';
 import React from 'react';
 import SEO from '../components/SEO';
+
+// Conditionally import Ant Design icons if in a client environment
+const AntIcons = typeof window !== 'undefined' ? require('@ant-design/icons') : {};
 
 const queryClient = new QueryClient();
 
@@ -39,7 +44,7 @@ function MyApp({ Component, pageProps }) {
                     keywords="Hacker News, Next.js, Clone, Posts, Discussions"
                 />
                 <QueryClientProvider client={queryClient}>
-                    <Component {...pageProps} />
+                    <Component {...pageProps} AntIcons={AntIcons} />
                 </QueryClientProvider>
             </ConfigProvider>
         </ErrorBoundary>

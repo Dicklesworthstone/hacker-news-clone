@@ -1,7 +1,8 @@
 import { Op, sequelize } from 'sequelize';
 import nc from 'next-connect';
-import { Post, User, Upvote, Comment } from '../../models';
-import logger from '../../utils/logger';
+import db from '../../models';
+const { Post, User, Upvote, Comment, Tag, Category, PostTag  } = db;
+import serverLogger from '../../utils/server-logger';  // Corrected import path
 import { getCachedData, setCachedData } from '../../utils/cache';
 
 const GRAVITY = 1.8;
@@ -21,10 +22,21 @@ const handler = nc()
             if (!posts) {
                 const where = {};
                 if (category) {
-                    where.category = category;
+                    const categoryInstance = await Category.findOne({ where: { name: category } });
+                    if (categoryInstance) {
+                        where.categoryId = categoryInstance.id;
+                    } else {
+                        return res.status(404).json({ error: 'Category not found' });
+                    }
                 }
+
                 if (tag) {
-                    where.tags = { [Op.like]: `%${tag}%` };
+                    const tagInstance = await Tag.findOne({ where: { name: tag } });
+                    if (tagInstance) {
+                        where['$tags.id$'] = tagInstance.id;
+                    } else {
+                        return res.status(404).json({ error: 'Tag not found' });
+                    }
                 }
 
                 posts = await Post.findAll({
@@ -40,6 +52,16 @@ const handler = nc()
                             attributes: [
                                 [sequelize.fn('COUNT', sequelize.col('comments.id')), 'commentCount']
                             ]
+                        },
+                        {
+                            model: Tag,
+                            as: 'tags',
+                            through: { attributes: [] }
+                        },
+                        {
+                            model: Category,
+                            as: 'category',
+                            attributes: ['name']
                         }
                     ],
                     attributes: {
@@ -62,12 +84,46 @@ const handler = nc()
 
                 setCachedData(cacheKey, posts); // Cache the result for future requests
             } else {
-                logger.info(`Serving posts from cache for query: ${cacheKey}`);
+                serverLogger.info(`Serving posts from cache for query: ${cacheKey}`);
             }
 
             res.status(200).json(posts);
         } catch (error) {
-            logger.error(`Error fetching posts: ${error.message}`);
+            serverLogger.error(`Error fetching posts: ${error.message}`);
+            res.status(500).json({ error: 'Internal server error' });
+        }
+    })
+    .post(async (req, res) => {
+        try {
+            const { title, content, authorId, tags, category } = req.body;
+
+            // Validate Category
+            let categoryInstance = null;
+            if (category) {
+                categoryInstance = await Category.findOne({ where: { name: category } });
+                if (!categoryInstance) {
+                    return res.status(404).json({ error: 'Category not found' });
+                }
+            }
+
+            // Create Post
+            const post = await Post.create({
+                title,
+                content,
+                authorId,
+                categoryId: categoryInstance ? categoryInstance.id : null,
+            });
+
+            // Associate Tags with the Post
+            if (tags && tags.length > 0) {
+                const tagInstances = await Tag.findAll({ where: { name: tags } });
+                await post.setTags(tagInstances);
+            }
+
+            serverLogger.info(`New post created: ${title}`);
+            res.status(201).json(post);
+        } catch (error) {
+            serverLogger.error(`Error creating post: ${error.message}`);
             res.status(500).json({ error: 'Internal server error' });
         }
     });

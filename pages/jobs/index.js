@@ -1,3 +1,5 @@
+'use client';
+
 import { useQuery } from 'react-query';
 import axios from 'axios';
 import { Typography, Spin, Alert, List, Card, Button } from 'antd';

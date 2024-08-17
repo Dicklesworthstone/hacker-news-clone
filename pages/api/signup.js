@@ -1,8 +1,9 @@
-import { User } from '../../../models';
+import db from '../../models';
+const { User } = db;
 import nc from 'next-connect';
 import bcrypt from 'bcryptjs';
-import logger from '../../../utils/logger';
-import { getCachedData, setCachedData } from '../../../utils/cache';
+import serverLogger from '../../utils/server-logger';  // Corrected import path
+import { getCachedData, setCachedData } from '../../utils/cache';  // Adjusted the path to two levels up
 
 const signUpHandler = nc()
     .post(async (req, res) => {
@@ -42,7 +43,7 @@ const signUpHandler = nc()
             // Cache the new user data
             setCachedData(cacheKey, newUser);
 
-            logger.info(`New user created: ${username}`);
+            serverLogger.info(`New user created: ${username}`);
 
             // Return the created user (excluding password)
             res.status(201).json({
@@ -52,7 +53,7 @@ const signUpHandler = nc()
                 createdAt: newUser.createdAt,
             });
         } catch (error) {
-            logger.error(`Error during user signup: ${error.message}`);
+            serverLogger.error(`Error during user signup: ${error.message}`);
             res.status(500).json({ error: 'Internal server error' });
         }
     });

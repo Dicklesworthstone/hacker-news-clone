@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useInfiniteQuery } from 'react-query';
 import InfiniteScroll from 'react-infinite-scroll-component';
