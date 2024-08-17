@@ -1,5 +1,38 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/hacker-news-clone.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Set up environment variables:
+   - Create a `.env` file in the root directory with the following variables:
+     ```env
+     DATABASE_URL=your_database_url
+     NEXTAUTH_URL=http://localhost:3000
+     ```
+
+4. Run migrations:
+   ```bash
+   npx sequelize-cli db:migrate
+   ```
+
+5. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+6. Run tests:
+   ```bash
+   npm test
+   ```
+
+
 ## Getting Started
 
 First, run the development server:
