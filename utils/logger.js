@@ -1,5 +1,4 @@
 import pino from 'pino';
-import pinoHttp from 'pino-http';
 
 const logger = pino({
   level: process.env.LOG_LEVEL || 'info',
@@ -13,6 +12,26 @@ const logger = pino({
   }),
 });
 
-export const httpLogger = pinoHttp({ logger });
+// Initialize httpLogger as null initially
+let httpLogger = null;
 
-export default logger;
+// Server-side code only
+if (typeof window === 'undefined') {
+  // Dynamically import pino-http only in a server-side context
+  import('pino-http').then((pinoHttp) => {
+    httpLogger = pinoHttp.default({ logger });
+  }).catch((error) => {
+    logger.error('Failed to load pino-http', error);
+  });
+} else {
+  // Mock the logger for the client-side to prevent errors
+  httpLogger = {
+    logger: {
+      info: (...args) => console.log('[INFO]:', ...args),
+      error: (...args) => console.error('[ERROR]:', ...args),
+      warn: (...args) => console.warn('[WARN]:', ...args),
+    },
+  };
+}
+
+export { httpLogger, logger as default };

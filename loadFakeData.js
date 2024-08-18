@@ -77,7 +77,7 @@ const validateAndLoadJson = (filename, requiredFields = []) => {
 };
 
 const usersData = validateAndLoadJson('users.json', ['username']);
-const postsData = validateAndLoadJson('posts.json', ['title', 'category', 'content']);
+const postsData = validateAndLoadJson('posts.json', ['title', 'authorId', 'category', 'content']);
 const commentsData = validateAndLoadJson('comments.json', ['content', 'postTitle', 'username']);
 const categoriesData = validateAndLoadJson('categories.json', ['name']).map(category => ({
   ...category,
@@ -110,15 +110,26 @@ const insertData = async () => {
       await findOrCreateItem(Tag, { name: tagData.name }, tagData);
     }
 
-    // Insert Posts with validated category associations and unique checks
+    // Insert Posts with validated category and authorId associations, and unique checks
     for (const postData of postsData) {
+      // Validate the author exists
+      const author = await User.findByPk(postData.authorId);
+      if (!author) {
+        console.error(`User not found for post: ${postData.title}, authorId: ${postData.authorId}`);
+        continue; // Skip this post if the author does not exist
+      }
+
+      // Validate the category exists
       const category = await Category.findOne({ where: { name: postData.category } });
       if (!category) {
         console.error(`Category not found for post: ${postData.title}`);
         continue;
       }
+
+      // Insert the post
       const post = await findOrCreateItem(Post, { title: postData.title }, {
         ...postData,
+        authorId: author.id,  // Use the validated authorId
         categoryId: category.id,
       });
 

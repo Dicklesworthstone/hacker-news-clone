@@ -1,21 +1,22 @@
-'use client';import '../styles/globals.css'; // Adjusted the path to relative
+'use client';
 
+import '../styles/globals.css';
 import ErrorBoundary from '../components/ErrorBoundary';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { httpLogger } from '../utils/logger';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ConfigProvider } from 'antd';
-import dynamic from 'next/dynamic';
 import React from 'react';
+import Head from 'next/head';
 import SEO from '../components/SEO';
 
-// Conditionally import Ant Design icons if in a client environment
 const AntIcons = typeof window !== 'undefined' ? require('@ant-design/icons') : {};
 
 const queryClient = new QueryClient();
 
-if (process.env.NODE_ENV !== 'production') {
+// Conditionally import @axe-core/react in client-side only
+if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
     const axe = require('@axe-core/react');
     axe(React, 1000);
 }
@@ -26,7 +27,9 @@ function MyApp({ Component, pageProps }) {
     useEffect(() => {
         const handleRouteChange = (url) => {
             console.log(`Navigating to: ${url}`);
-            httpLogger(router.asPath, router.query); // Log the HTTP request
+            if (httpLogger && httpLogger.logger && httpLogger.logger.info) {
+                httpLogger.logger.info(`Route change to ${url}`, { path: router.asPath, query: router.query });
+            }
         };
 
         router.events.on('routeChangeComplete', handleRouteChange);
@@ -38,6 +41,9 @@ function MyApp({ Component, pageProps }) {
     return (
         <ErrorBoundary>
             <ConfigProvider>
+                <Head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                </Head>
                 <SEO 
                     title="Hacker News Clone" 
                     description="A clone of Hacker News built with Next.js" 

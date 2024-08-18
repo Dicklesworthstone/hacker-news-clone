@@ -20,6 +20,15 @@ const nextConfig = {
       },
     });
 
+    // Ensure next-connect is treated as an external
+    config.externals = config.externals || [];
+    config.externals.push(function ({ request }, callback) {
+      if (request === 'next-connect') {
+        return callback(null, 'commonjs next-connect');
+      }
+      callback();
+    });
+
     return config;
   },
 };
