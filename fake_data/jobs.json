@@ -1,0 +1,142 @@
+[
+    {
+        "title": "Senior Software Engineer",
+        "company": "Tech Innovators Inc.",
+        "description": "We’re looking for a Senior Software Engineer to join our growing team. You’ll be responsible for designing and implementing features across our stack, from front-end to back-end.",
+        "location": "Remote",
+        "url": "https://techinnovators.com/careers/senior-software-engineer"
+    },
+    {
+        "title": "Frontend Developer (React/Next.js)",
+        "company": "Web Wizards",
+        "description": "We’re on the lookout for a frontend developer skilled in React and Next.js to help us build cutting-edge web applications.",
+        "location": "San Francisco, CA",
+        "url": "https://webwizards.com/jobs/frontend-developer"
+    },
+    {
+        "title": "DevOps Engineer",
+        "company": "Cloud Solutions LLC",
+        "description": "We are seeking a DevOps Engineer to help us build and maintain our cloud infrastructure. The ideal candidate will have experience with AWS, Docker, and Kubernetes.",
+        "location": "New York, NY",
+        "url": "https://cloudsolutions.com/careers/devops-engineer"
+    },
+    {
+        "title": "Data Scientist",
+        "company": "DataMinds",
+        "description": "DataMinds is looking for a Data Scientist to analyze large datasets and build predictive models. Experience with Python, R, and machine learning frameworks is required.",
+        "location": "Remote",
+        "url": "https://dataminds.com/careers/data-scientist"
+    },
+    {
+        "title": "Backend Developer (Node.js)",
+        "company": "APIs R Us",
+        "description": "Join APIs R Us as a Backend Developer, focusing on building and maintaining scalable APIs. Strong experience with Node.js and Express is a must.",
+        "location": "Austin, TX",
+        "url": "https://apisrus.com/jobs/backend-developer"
+    },
+    {
+        "title": "Full-Stack Developer",
+        "company": "Innovative Startups",
+        "description": "We are a fast-growing startup looking for a Full-Stack Developer who is proficient in both front-end and back-end technologies, particularly React and Node.js.",
+        "location": "Remote",
+        "url": "https://innovativestartups.com/careers/full-stack-developer"
+    },
+    {
+        "title": "Machine Learning Engineer",
+        "company": "AI Future",
+        "description": "AI Future is hiring a Machine Learning Engineer to work on cutting-edge AI projects. Experience with TensorFlow, PyTorch, and cloud deployment is essential.",
+        "location": "San Francisco, CA",
+        "url": "https://aifuture.com/careers/machine-learning-engineer"
+    },
+    {
+        "title": "Mobile Developer (iOS/Android)",
+        "company": "Appify",
+        "description": "Join Appify as a Mobile Developer to create innovative mobile applications for iOS and Android platforms. Proficiency in Swift, Objective-C, and Kotlin is required.",
+        "location": "Los Angeles, CA",
+        "url": "https://appify.com/jobs/mobile-developer"
+    },
+    {
+        "title": "Security Engineer",
+        "company": "SecureTech",
+        "description": "SecureTech is looking for a Security Engineer to enhance our security protocols and protect our systems from cyber threats. Expertise in penetration testing and cryptography is required.",
+        "location": "Remote",
+        "url": "https://securetech.com/careers/security-engineer"
+    },
+    {
+        "title": "Product Manager",
+        "company": "InnovateX",
+        "description": "InnovateX is seeking a Product Manager to oversee the development and launch of new products. Experience with Agile methodologies and a strong understanding of user-centered design are essential.",
+        "location": "Chicago, IL",
+        "url": "https://innovatex.com/jobs/product-manager"
+    },
+    {
+        "title": "Cloud Architect",
+        "company": "Cloudify Solutions",
+        "description": "Cloudify Solutions is hiring a Cloud Architect to design and implement cloud solutions. Strong knowledge of AWS, Azure, and cloud security is required.",
+        "location": "Seattle, WA",
+        "url": "https://cloudifysolutions.com/careers/cloud-architect"
+    },
+    {
+        "title": "Data Engineer",
+        "company": "DataFlow",
+        "description": "Join DataFlow as a Data Engineer to build and optimize data pipelines. Experience with Hadoop, Spark, and SQL is a must.",
+        "location": "Boston, MA",
+        "url": "https://dataflow.com/careers/data-engineer"
+    },
+    {
+        "title": "UI/UX Designer",
+        "company": "DesignPro",
+        "description": "DesignPro is seeking a UI/UX Designer to create intuitive and visually appealing user interfaces. Proficiency in Adobe Creative Suite and Figma is required.",
+        "location": "San Diego, CA",
+        "url": "https://designpro.com/careers/ui-ux-designer"
+    },
+    {
+        "title": "Software Engineer (Python)",
+        "company": "PyWorks",
+        "description": "PyWorks is hiring a Software Engineer with strong Python skills to develop and maintain software applications. Experience with Django and Flask is a plus.",
+        "location": "Remote",
+        "url": "https://pyworks.com/jobs/software-engineer"
+    },
+    {
+        "title": "Technical Support Engineer",
+        "company": "SupportTech",
+        "description": "SupportTech is looking for a Technical Support Engineer to assist customers with technical issues. Strong troubleshooting skills and customer service experience are required.",
+        "location": "Denver, CO",
+        "url": "https://supporttech.com/careers/technical-support-engineer"
+    },
+    {
+        "title": "Quality Assurance Engineer",
+        "company": "Testify",
+        "description": "Join Testify as a Quality Assurance Engineer to ensure the quality and reliability of our software products. Experience with automated testing tools like Selenium is required.",
+        "location": "Remote",
+        "url": "https://testify.com/jobs/qa-engineer"
+    },
+    {
+        "title": "Blockchain Developer",
+        "company": "CryptoDevs",
+        "description": "CryptoDevs is seeking a Blockchain Developer to work on decentralized applications. Proficiency in Solidity and smart contract development is required.",
+        "location": "Remote",
+        "url": "https://cryptodevs.com/careers/blockchain-developer"
+    },
+    {
+        "title": "Database Administrator",
+        "company": "DataGuard",
+        "description": "DataGuard is hiring a Database Administrator to manage and optimize our databases. Experience with MySQL, PostgreSQL, and database security is required.",
+        "location": "Atlanta, GA",
+        "url": "https://dataguard.com/careers/database-administrator"
+    },
+    {
+        "title": "AI Research Scientist",
+        "company": "DeepAI",
+        "description": "DeepAI is looking for an AI Research Scientist to lead research projects in machine learning and deep learning. A PhD in a related field and experience with research publications are preferred.",
+        "location": "New York, NY",
+        "url": "https://deepai.com/careers/ai-research-scientist"
+    },
+    {
+        "title": "IT Project Manager",
+        "company": "TechManage",
+        "description": "TechManage is seeking an IT Project Manager to oversee the planning and execution of technology projects. PMP certification and experience with Agile/Scrum methodologies are required.",
+        "location": "Houston, TX",
+        "url": "https://techmanage.com/careers/it-project-manager"
+    }
+]

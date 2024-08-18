@@ -14,9 +14,24 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       unique: true,
     },
+    slug: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+    },
   }, {
     sequelize,
     modelName: 'Category',
+    indexes: [
+      {
+        unique: true,
+        fields: ['name']
+      },
+      {
+        unique: true,
+        fields: ['slug']
+      }
+    ],
   });
 
   return Category;

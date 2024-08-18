@@ -1,6 +1,8 @@
-/** @type {import('next').NextConfig} */
+import withTM from 'next-transpile-modules'; // Import next-transpile-modules
+
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true,
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
@@ -10,37 +12,22 @@ const nextConfig = {
     }
 
     config.module.rules.push({
-      test: /\.m?js/,
-      resolve: {
-        fullySpecified: false,
-      },
-    });
-
-    config.module.rules.push({
       test: /\.m?js$/,
       include: /node_modules/,
       type: 'javascript/auto',
-    });
-
-    config.module.rules.push({
-      test: /\.js$/,
-      include: /node_modules\/@ant-design\/icons/,
-      use: [
-        {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-            plugins: [
-              '@babel/plugin-proposal-object-rest-spread',
-              ['@babel/plugin-transform-runtime', { regenerator: true }],
-            ],
-          },
-        },
-      ],
+      resolve: {
+        fullySpecified: false,
+      },
     });
 
     return config;
   },
 };
 
-export default nextConfig;
+export default withTM([
+  '@ant-design/icons',
+  '@ant-design/icons-svg',
+  'rc-util',
+  'rc-pagination',
+  'rc-picker',  // Add rc-picker to be transpiled
+])(nextConfig);

@@ -1,0 +1,296 @@
+[
+    {
+        "title": "Show HN: A new open-source framework for Node.js",
+        "content": "I’ve just released an open-source framework for building scalable applications with Node.js. It’s still in its early stages, but I’d love some feedback.\n\n**GitHub**: [Link](https://github.com/some_repo)\n\nLet me know what you think!",
+        "authorId": 1,
+        "categoryId": 1,
+        "tags": ["JavaScript", "Node.js", "Open Source"]
+    },
+    {
+        "title": "Ask HN: What’s the best way to learn machine learning?",
+        "content": "I’ve been diving into machine learning recently and would love to hear how others have gone about learning it. Any specific courses, books, or projects that really helped you grasp the concepts?",
+        "authorId": 2,
+        "categoryId": 2,
+        "tags": ["Machine Learning", "AI", "Career"]
+    },
+    {
+        "title": "Show HN: A side project I built over the weekend",
+        "content": "I wanted to challenge myself to build a full-stack app over the weekend. Here’s what I came up with: [Demo](https://demo.com)\n\n**Technologies used**: React, Next.js, and Tailwind CSS.\n\nWould love to hear your thoughts!",
+        "authorId": 3,
+        "categoryId": 1,
+        "tags": ["React", "Next.js", "Web Development"]
+    },
+    {
+        "title": "Ask HN: Best resources for mastering Kubernetes?",
+        "content": "I'm looking to get serious with Kubernetes. Can anyone recommend the best resources to get from beginner to expert? Books, courses, hands-on projects are all welcome!",
+        "authorId": 4,
+        "categoryId": 2,
+        "tags": ["Kubernetes", "DevOps", "Cloud Computing"]
+    },
+    {
+        "title": "Show HN: My personal finance management tool built with React",
+        "content": "Over the last few months, I've been working on a personal finance management tool. It's built with React and hooks into various financial APIs to provide real-time data. You can check it out here: [Live Demo](https://finance-tool-demo.com)\n\nWould love some feedback!",
+        "authorId": 5,
+        "categoryId": 1,
+        "tags": ["React", "Finance", "APIs"]
+    },
+    {
+        "title": "Ask HN: Transitioning from Web Development to Data Science",
+        "content": "I've been working as a web developer for the past 5 years, but I'm now interested in transitioning to data science. What would be the best path to make this switch? Any advice or resources would be greatly appreciated!",
+        "authorId": 6,
+        "categoryId": 2,
+        "tags": ["Data Science", "Career", "Web Development"]
+    },
+    {
+        "title": "Show HN: A new JavaScript library for manipulating DOM elements",
+        "content": "I've created a new JavaScript library that makes it easy to manipulate DOM elements. It's lightweight, fast, and integrates seamlessly with other libraries. Check it out on GitHub: [Link](https://github.com/js-library)\n\nFeedback is appreciated!",
+        "authorId": 7,
+        "categoryId": 1,
+        "tags": ["JavaScript", "Web Development", "Open Source"]
+    },
+    {
+        "title": "Ask HN: How do you stay updated with the latest trends in tech?",
+        "content": "With technology evolving so rapidly, how do you all stay updated with the latest trends and developments? Do you follow specific blogs, newsletters, or podcasts?",
+        "authorId": 8,
+        "categoryId": 2,
+        "tags": ["Tech News", "Career", "Learning"]
+    },
+    {
+        "title": "Show HN: My machine learning project for predicting stock prices",
+        "content": "I've been experimenting with machine learning and built a model that predicts stock prices based on historical data. The project is still in its early stages, but it's showing promising results. Check out the code on GitHub: [Link](https://github.com/stock-predictor)\n\nFeedback is welcome!",
+        "authorId": 9,
+        "categoryId": 1,
+        "tags": ["Machine Learning", "Finance", "Python"]
+    },
+    {
+        "title": "Ask HN: Tips for optimizing React performance in large applications?",
+        "content": "I'm working on a large-scale React application, and performance is becoming a bottleneck. What are some best practices or tools for optimizing React performance in such scenarios?",
+        "authorId": 10,
+        "categoryId": 2,
+        "tags": ["React", "Web Development", "Performance"]
+    },
+    {
+        "title": "Show HN: A new open-source CSS framework for modern web design",
+        "content": "I’ve developed a new CSS framework aimed at modern web design, focusing on responsiveness and accessibility. You can check it out here: [Link](https://github.com/css-framework)\n\nLet me know your thoughts!",
+        "authorId": 11,
+        "categoryId": 1,
+        "tags": ["CSS", "Web Design", "Open Source"]
+    },
+    {
+        "title": "Ask HN: What are the best tools for DevOps automation?",
+        "content": "I'm setting up a CI/CD pipeline and want to automate as much as possible. What are the best tools and practices for DevOps automation?",
+        "authorId": 12,
+        "categoryId": 2,
+        "tags": ["DevOps", "CI/CD", "Automation"]
+    },
+    {
+        "title": "Show HN: A blockchain-based voting system",
+        "content": "I’ve built a prototype for a blockchain-based voting system. It’s decentralized and ensures that votes cannot be tampered with. Check out the details here: [Link](https://github.com/blockchain-voting)\n\nFeedback is highly appreciated!",
+        "authorId": 13,
+        "categoryId": 1,
+        "tags": ["Blockchain", "Security", "Open Source"]
+    },
+    {
+        "title": "Ask HN: How to get started with cloud computing?",
+        "content": "I’m interested in getting into cloud computing but don’t know where to start. What’s the best way to dive into it? Any specific platforms or resources that you recommend?",
+        "authorId": 14,
+        "categoryId": 2,
+        "tags": ["Cloud Computing", "AWS", "Career"]
+    },
+    {
+        "title": "Show HN: An AI-based tool for generating marketing content",
+        "content": "I’ve built an AI-based tool that helps generate marketing content. It uses natural language processing to create copy based on your inputs. Check out the live demo: [Link](https://ai-marketing-tool.com)\n\nWould love some feedback!",
+        "authorId": 15,
+        "categoryId": 1,
+        "tags": ["Artificial Intelligence", "Marketing", "NLP"]
+    },
+    {
+        "title": "Ask HN: Best practices for securing a web application?",
+        "content": "What are some essential security practices to follow when building a web application? I’m especially concerned about data breaches and preventing unauthorized access.",
+        "authorId": 16,
+        "categoryId": 2,
+        "tags": ["Security", "Web Development", "Best Practices"]
+    },
+    {
+        "title": "Show HN: A new framework for building REST APIs",
+        "content": "I’ve developed a framework specifically for building REST APIs. It’s lightweight, easy to use, and integrates well with existing systems. You can check it out here: [Link](https://github.com/rest-api-framework)\n\nI’d appreciate any feedback or suggestions!",
+        "authorId": 17,
+        "categoryId": 1,
+        "tags": ["REST API", "Web Development", "Open Source"]
+    },
+    {
+        "title": "Ask HN: Advice for managing a remote development team?",
+        "content": "I’ve recently transitioned to managing a fully remote development team. What are some best practices for managing remote teams effectively?",
+        "authorId": 18,
+        "categoryId": 2,
+        "tags": ["Remote Work", "Management", "Career"]
+    },
+    {
+        "title": "Show HN: My experience building a real-time chat application",
+        "content": "I’ve built a real-time chat application using WebSocket and Node.js. It supports multiple rooms and private messaging. You can check out the demo here: [Link](https://chat-app-demo.com)\n\nLooking forward to your feedback!",
+        "authorId": 19,
+        "categoryId": 1,
+        "tags": ["WebSocket", "Node.js", "Real-Time"]
+    },
+    {
+        "title": "Ask HN: What’s the best approach to scale a microservices architecture?",
+        "content": "We’re running into some issues scaling our microservices architecture. What are some proven strategies for scaling microservices effectively?",
+        "authorId": 20,
+        "categoryId": 2,
+        "tags": ["Microservices", "Architecture", "Scalability"]
+    },
+    {
+        "title": "Show HN: A new tool for automating front-end testing",
+        "content": "I’ve developed a tool that automates front-end testing. It’s easy to integrate into existing CI/CD pipelines and supports multiple browsers. You can find it here: [Link](https://github.com/frontend-testing-tool)\n\nI’d love to hear your thoughts!",
+        "authorId": 21,
+        "categoryId": 1,
+        "tags": ["Testing", "Front-End", "Automation"]
+    },
+    {
+        "title": "Ask HN: How do you handle serverless architecture at scale?",
+        "content": "We’re considering moving to a serverless architecture but are concerned about scaling. What challenges have you faced, and how did you overcome them?",
+        "authorId": 22,
+        "categoryId": 2,
+        "tags": ["Serverless", "Scalability", "Cloud Computing"]
+    },
+    {
+        "title": "Show HN: A new open-source project management tool",
+        "content": "I’ve built an open-source project management tool designed for developers. It integrates with GitHub and supports agile methodologies. Check it out here: [Link](https://github.com/project-management-tool)\n\nLooking forward to your feedback!",
+        "authorId": 23,
+        "categoryId": 1,
+        "tags": ["Project Management", "GitHub", "Agile"]
+    },
+    {
+        "title": "Ask HN: How do you optimize your CI/CD pipelines?",
+        "content": "We’re looking to optimize our CI/CD pipelines to speed up our deployment process. What tools or strategies have worked well for you?",
+        "authorId": 24,
+        "categoryId": 2,
+        "tags": ["CI/CD", "DevOps", "Automation"]
+    },
+    {
+        "title": "Show HN: My Python script for automating repetitive tasks",
+        "content": "I’ve written a Python script that automates a bunch of repetitive tasks in my daily workflow. It’s helped me save a lot of time. You can check it out here: [Link](https://github.com/automation-script)\n\nI’d love to hear your thoughts or improvements!",
+        "authorId": 25,
+        "categoryId": 1,
+        "tags": ["Python", "Automation", "Productivity"]
+    },
+    {
+        "title": "Ask HN: Best practices for designing RESTful APIs?",
+        "content": "What are some of the best practices to follow when designing RESTful APIs? I’m especially interested in maintaining consistency and scalability.",
+        "authorId": 26,
+        "categoryId": 2,
+        "tags": ["REST API", "Design", "Best Practices"]
+    },
+    {
+        "title": "Show HN: A library for managing state in React applications",
+        "content": "I’ve created a new library for managing state in React applications. It’s simple, lightweight, and integrates well with other React tools. Check it out here: [Link](https://github.com/state-management-library)\n\nFeedback is welcome!",
+        "authorId": 27,
+        "categoryId": 1,
+        "tags": ["React", "State Management", "Web Development"]
+    },
+    {
+        "title": "Ask HN: How do you manage technical debt in your projects?",
+        "content": "Technical debt is becoming a problem in our projects. How do you manage and mitigate technical debt effectively?",
+        "authorId": 28,
+        "categoryId": 2,
+        "tags": ["Technical Debt", "Management", "Best Practices"]
+    },
+    {
+        "title": "Show HN: A new open-source library for handling async tasks in Python",
+        "content": "I’ve built a Python library that simplifies handling async tasks. It’s been a game-changer for my projects. You can check it out here: [Link](https://github.com/async-library)\n\nI’d love some feedback!",
+        "authorId": 29,
+        "categoryId": 1,
+        "tags": ["Python", "Async", "Open Source"]
+    },
+    {
+        "title": "Ask HN: What’s the best way to structure a large React application?",
+        "content": "I’m working on a large-scale React application and am having trouble organizing the project structure. What’s the best way to structure a large React app?",
+        "authorId": 30,
+        "categoryId": 2,
+        "tags": ["React", "Web Development", "Best Practices"]
+    },
+    {
+        "title": "Show HN: A Python-based tool for automating cloud deployments",
+        "content": "I've developed a Python tool that automates cloud deployments using Terraform and Ansible. It’s designed to be simple yet powerful, making cloud infrastructure management much easier. Check out the project here: [Link](https://github.com/cloud-deploy-tool)\n\nFeedback and contributions are welcome!",
+        "authorId": 31,
+        "categoryId": 1,
+        "tags": ["Python", "Cloud Computing", "Automation"]
+    },
+    {
+        "title": "Ask HN: What’s the best way to learn Docker for beginners?",
+        "content": "I’m new to Docker and would love some guidance on how to get started. What are the best resources or tutorials for learning Docker from scratch?",
+        "authorId": 32,
+        "categoryId": 2,
+        "tags": ["Docker", "DevOps", "Learning"]
+    },
+    {
+        "title": "Show HN: A new tool for automating SEO analysis",
+        "content": "I’ve created a tool that automates SEO analysis for websites. It crawls your site, checks for SEO issues, and provides actionable insights. You can find it here: [Link](https://github.com/seo-analysis-tool)\n\nLooking forward to your feedback!",
+        "authorId": 33,
+        "categoryId": 1,
+        "tags": ["SEO", "Automation", "Web Development"]
+    },
+    {
+        "title": "Ask HN: What are the best practices for managing large-scale databases?",
+        "content": "Managing large-scale databases has become a challenge for our team. What are some of the best practices to ensure performance and reliability?",
+        "authorId": 34,
+        "categoryId": 2,
+        "tags": ["Databases", "Performance", "Best Practices"]
+    },
+    {
+        "title": "Show HN: A new JavaScript framework for building PWAs",
+        "content": "I’ve developed a JavaScript framework specifically for building Progressive Web Apps (PWAs). It’s optimized for performance and works seamlessly across different devices. You can check it out here: [Link](https://github.com/pwa-framework)\n\nFeedback is welcome!",
+        "authorId": 35,
+        "categoryId": 1,
+        "tags": ["JavaScript", "PWA", "Web Development"]
+    },
+    {
+        "title": "Ask HN: What tools do you use for real-time analytics?",
+        "content": "Our team is looking to implement real-time analytics for our web applications. What tools and technologies do you recommend for handling real-time data?",
+        "authorId": 36,
+        "categoryId": 2,
+        "tags": ["Analytics", "Real-Time", "Data"]
+    },
+    {
+        "title": "Show HN: A new Python library for natural language processing",
+        "content": "I’ve created a Python library that simplifies natural language processing tasks. It’s lightweight and integrates well with other NLP tools. You can check it out here: [Link](https://github.com/nlp-library)\n\nLooking forward to your feedback!",
+        "authorId": 37,
+        "categoryId": 1,
+        "tags": ["Python", "NLP", "Machine Learning"]
+    },
+    {
+        "title": "Ask HN: How do you secure microservices in a cloud environment?",
+        "content": "We’re running microservices in a cloud environment, and security is a major concern. What are the best practices for securing microservices?",
+        "authorId": 38,
+        "categoryId": 2,
+        "tags": ["Microservices", "Security", "Cloud Computing"]
+    },
+    {
+        "title": "Show HN: An open-source project for building distributed systems",
+        "content": "I’ve been working on an open-source project that simplifies the development of distributed systems. It includes tools for managing distributed transactions and fault tolerance. Check it out here: [Link](https://github.com/distributed-systems-project)\n\nFeedback is highly appreciated!",
+        "authorId": 39,
+        "categoryId": 1,
+        "tags": ["Distributed Systems", "Open Source", "Cloud Computing"]
+    },
+    {
+        "title": "Ask HN: How do you manage large-scale CI/CD pipelines?",
+        "content": "Our team is struggling with managing large-scale CI/CD pipelines. What strategies and tools have worked for you to streamline the process?",
+        "authorId": 40,
+        "categoryId": 2,
+        "tags": ["CI/CD", "DevOps", "Scalability"]
+    },
+    {
+        "title": "Show HN: A new open-source framework for serverless applications",
+        "content": "I’ve developed a framework specifically for building serverless applications. It’s designed to be highly scalable and easy to deploy. You can check it out here: [Link](https://github.com/serverless-framework)\n\nWould love to hear your feedback!",
+        "authorId": 41,
+        "categoryId": 1,
+        "tags": ["Serverless", "Cloud Computing", "Open Source"]
+    },
+    {
+        "title": "Ask HN: What’s the best way to handle API rate limiting?",
+        "content": "We’re facing issues with API rate limiting in our applications. What are some best practices for handling API rate limits efficiently?",
+        "authorId": 42,
+        "categoryId": 2,
+        "tags": ["API", "Rate Limiting", "Web Development"]
+    }
+]

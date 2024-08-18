@@ -1,0 +1,746 @@
+[
+    {
+        "postId": 1,
+        "authorId": 4,
+        "content": "This looks really promising! I’ve been looking for something lightweight yet powerful for a while. How does it compare to Express in terms of performance?",
+        "upvotes": 50
+    },
+    {
+        "postId": 1,
+        "parentId": 1,
+        "authorId": 1,
+        "content": "Thanks! In terms of performance, it’s still early days, but initial benchmarks show it’s about 10% faster than Express in handling requests due to the streamlined middleware.",
+        "upvotes": 40
+    },
+    {
+        "postId": 1,
+        "authorId": 5,
+        "content": "That’s impressive! Does it support middleware chaining like Express?",
+        "upvotes": 30
+    },
+    {
+        "postId": 1,
+        "parentId": 3,
+        "authorId": 1,
+        "content": "Yes, it does support middleware chaining, but we’ve made the API more flexible to allow for better customization.",
+        "upvotes": 35
+    },
+    {
+        "postId": 1,
+        "authorId": 6,
+        "content": "How’s the documentation? One of the things I like about Express is the extensive documentation and community support.",
+        "upvotes": 45
+    },
+    {
+        "postId": 1,
+        "parentId": 5,
+        "authorId": 1,
+        "content": "We’re working on the documentation right now. We plan to have comprehensive guides and examples, similar to what Express offers.",
+        "upvotes": 38
+    },
+    {
+        "postId": 1,
+        "authorId": 7,
+        "content": "Do you plan to add TypeScript support? That would be a game-changer for many developers.",
+        "upvotes": 60
+    },
+    {
+        "postId": 1,
+        "parentId": 7,
+        "authorId": 1,
+        "content": "Absolutely! TypeScript support is on our roadmap, and we hope to have it implemented by the next release.",
+        "upvotes": 52
+    },
+    {
+        "postId": 2,
+        "authorId": 5,
+        "content": "I’d recommend starting with Andrew Ng’s machine learning course on Coursera. It’s a fantastic foundation and covers a lot of the basics very well.",
+        "upvotes": 80
+    },
+    {
+        "postId": 2,
+        "authorId": 8,
+        "content": "Totally agree. Andrew Ng’s course is a must for anyone getting into machine learning. I'd also suggest supplementing it with hands-on projects to reinforce what you learn.",
+        "upvotes": 70
+    },
+    {
+        "postId": 2,
+        "authorId": 9,
+        "content": "After Andrew Ng’s course, you might want to check out fast.ai’s deep learning course. It’s more hands-on and dives deeper into practical applications.",
+        "upvotes": 65
+    },
+    {
+        "postId": 2,
+        "authorId": 10,
+        "content": "How do these courses compare to Udacity’s Machine Learning Nanodegree? I’m trying to decide where to invest my time.",
+        "upvotes": 55
+    },
+    {
+        "postId": 2,
+        "parentId": 11,
+        "authorId": 8,
+        "content": "The Udacity Nanodegree is also solid, especially if you’re looking for a structured path with real-world projects. However, it’s more expensive compared to the other options.",
+        "upvotes": 50
+    },
+    {
+        "postId": 3,
+        "authorId": 2,
+        "content": "Nice job! The design looks clean and the app is super responsive. What was the biggest challenge you faced during the build?",
+        "upvotes": 60
+    },
+    {
+        "postId": 3,
+        "parentId": 13,
+        "authorId": 3,
+        "content": "Thanks! The biggest challenge was optimizing the server-side rendering with Next.js while keeping the app responsive. It took a lot of tweaking to get the performance just right.",
+        "upvotes": 50
+    },
+    {
+        "postId": 3,
+        "authorId": 11,
+        "content": "Did you encounter any issues with integrating Tailwind CSS? I’ve heard that it can be tricky with server-side rendering.",
+        "upvotes": 45
+    },
+    {
+        "postId": 3,
+        "parentId": 15,
+        "authorId": 3,
+        "content": "There were a few challenges, especially with purging unused CSS in the production build. However, once we set up the configuration correctly, it worked seamlessly.",
+        "upvotes": 42
+    },
+    {
+        "postId": 4,
+        "authorId": 12,
+        "content": "For Kubernetes, I’d highly recommend 'Kubernetes Up & Running' by Kelsey Hightower. It’s a great resource for both beginners and intermediate users.",
+        "upvotes": 80
+    },
+    {
+        "postId": 4,
+        "authorId": 13,
+        "content": "I second that! The book is an excellent resource, and Kelsey Hightower’s Twitter is also a goldmine for Kubernetes tips and best practices.",
+        "upvotes": 70
+    },
+    {
+        "postId": 4,
+        "authorId": 14,
+        "content": "Don't forget about the official Kubernetes documentation. It’s very thorough and constantly updated with the latest features.",
+        "upvotes": 65
+    },
+    {
+        "postId": 5,
+        "authorId": 6,
+        "content": "This personal finance tool looks great! How does it handle multiple currencies?",
+        "upvotes": 60
+    },
+    {
+        "postId": 5,
+        "parentId": 19,
+        "authorId": 5,
+        "content": "Thanks! It supports multiple currencies by using exchange rates provided by a third-party API. Users can set their default currency, and the tool converts all transactions automatically.",
+        "upvotes": 55
+    },
+    {
+        "postId": 5,
+        "authorId": 15,
+        "content": "What about security? How do you ensure that users' financial data is protected?",
+        "upvotes": 65
+    },
+    {
+        "postId": 5,
+        "parentId": 21,
+        "authorId": 5,
+        "content": "Security is a top priority. All data is encrypted both in transit and at rest. We also use OAuth for authentication and regularly audit our security measures.",
+        "upvotes": 60
+    },
+    {
+        "postId": 6,
+        "authorId": 16,
+        "content": "Transitioning from web development to data science is definitely possible. Start by learning Python and get familiar with libraries like NumPy and pandas.",
+        "upvotes": 75
+    },
+    {
+        "postId": 6,
+        "authorId": 17,
+        "content": "I made the same transition a few years ago. Focus on building a strong foundation in statistics and machine learning. Also, practice by working on real-world datasets.",
+        "upvotes": 70
+    },
+    {
+        "postId": 6,
+        "authorId": 18,
+        "content": "Don’t forget about SQL. It’s still an essential skill in data science, especially when dealing with large datasets.",
+        "upvotes": 65
+    },
+    {
+        "postId": 6,
+        "parentId": 26,
+        "authorId": 16,
+        "content": "Good point! SQL is often overlooked, but it’s crucial for extracting and analyzing data efficiently.",
+        "upvotes": 55
+    },
+    {
+        "postId": 7,
+        "authorId": 19,
+        "content": "This new JavaScript library looks interesting. How does it compare to jQuery?",
+        "upvotes": 50
+    },
+    {
+        "postId": 7,
+        "parentId": 28,
+        "authorId": 7,
+        "content": "It’s much lighter and more modern than jQuery. The API is designed to be more intuitive and take advantage of the latest JavaScript features.",
+        "upvotes": 45
+    },
+    {
+        "postId": 7,
+        "authorId": 20,
+        "content": "What browsers does it support? I’m working on a project that needs to support older versions of IE.",
+        "upvotes": 55
+    },
+    {
+        "postId": 7,
+        "parentId": 30,
+        "authorId": 7,
+        "content": "It supports all modern browsers, but for older versions of IE, you might need to include some polyfills.",
+        "upvotes": 48
+    },
+    {
+        "postId": 8,
+        "authorId": 21,
+        "content": "I stay updated by following a mix of tech blogs, podcasts, and Twitter accounts of industry leaders. Hacker News is also a great source of information.",
+        "upvotes": 70
+    },
+    {
+        "postId": 8,
+        "authorId": 22,
+        "content": "Podcasts are a fantastic way to stay informed. I’d recommend 'Syntax' for web development and 'AI Alignment' for machine learning enthusiasts.",
+        "upvotes": 65
+    },
+    {
+        "postId": 8,
+        "authorId": 23,
+        "content": "I’ve set up a custom RSS feed that pulls in articles from my favorite blogs and news sites. It’s a great way to stay organized and not miss anything important.",
+        "upvotes": 60
+    },
+    {
+        "postId": 8,
+        "parentId": 33,
+        "authorId": 21,
+        "content": "That’s a great idea! I’ve been meaning to set up an RSS feed for a while. Do you use any specific tools to manage it?",
+        "upvotes": 55
+    },
+    {
+        "postId": 9,
+        "authorId": 24,
+        "content": "Your machine learning project sounds cool! How accurate are the stock price predictions?",
+        "upvotes": 75
+    },
+    {
+        "postId": 9,
+        "parentId": 35,
+        "authorId": 9,
+        "content": "The accuracy is about 70% on historical data, but it's still early days. I’m working on refining the model to improve the accuracy.",
+        "upvotes": 65
+    },
+    {
+        "postId": 9,
+        "authorId": 25,
+        "content": "Are you using any specific libraries or frameworks for this project?",
+        "upvotes": 55
+    },
+    {
+        "postId": 9,
+        "parentId": 37,
+        "authorId": 9,
+        "content": "Yes, I’m using TensorFlow and Keras for building the neural networks. They offer a lot of flexibility and are well-suited for this kind of work.",
+        "upvotes": 60
+    },
+    {
+        "postId": 10,
+        "authorId": 26,
+        "content": "Optimizing React performance can be tricky. I’d suggest using React’s built-in memoization and lazy loading features to improve speed.",
+        "upvotes": 80
+    },
+    {
+        "postId": 10,
+        "authorId": 27,
+        "content": "Also, make sure to avoid unnecessary re-renders by using React.memo and shouldComponentUpdate effectively.",
+        "upvotes": 75
+    },
+    {
+        "postId": 10,
+        "authorId": 28,
+        "content": "Don’t forget about the React Developer Tools extension. It’s invaluable for debugging performance issues in React applications.",
+        "upvotes": 70
+    },
+    {
+        "postId": 10,
+        "parentId": 41,
+        "authorId": 26,
+        "content": "Good call! The React Developer Tools have saved me a lot of time in tracking down performance bottlenecks.",
+        "upvotes": 65
+    },
+    {
+        "postId": 11,
+        "authorId": 29,
+        "content": "This new CSS framework looks promising. How does it compare to Tailwind CSS?",
+        "upvotes": 60
+    },
+    {
+        "postId": 11,
+        "parentId": 43,
+        "authorId": 11,
+        "content": "It’s similar in some ways, but it focuses more on accessibility and responsiveness out of the box. Tailwind is great, but this framework offers more built-in utilities for those aspects.",
+        "upvotes": 55
+    },
+    {
+        "postId": 11,
+        "authorId": 30,
+        "content": "I’ve been using Tailwind CSS for a while now. How easy is it to transition to this new framework?",
+        "upvotes": 50
+    },
+    {
+        "postId": 11,
+        "parentId": 45,
+        "authorId": 11,
+        "content": "The transition should be smooth. The syntax is similar, and there are migration guides available to help with the process.",
+        "upvotes": 48
+    },
+    {
+        "postId": 12,
+        "authorId": 31,
+        "content": "For DevOps automation, I’d recommend checking out Terraform and Ansible. They make managing infrastructure as code much easier.",
+        "upvotes": 75
+    },
+    {
+        "postId": 12,
+        "authorId": 32,
+        "content": "Jenkins is also a solid choice for CI/CD automation. Its plugin ecosystem is extensive, making it adaptable to almost any environment.",
+        "upvotes": 70
+    },
+    {
+        "postId": 12,
+        "authorId": 33,
+        "content": "If you’re working with containers, look into Kubernetes for orchestrating your deployments. It’s a bit of a learning curve, but well worth it.",
+        "upvotes": 65
+    },
+    {
+        "postId": 12,
+        "parentId": 49,
+        "authorId": 31,
+        "content": "Kubernetes is indeed powerful, but it can be overkill for smaller projects. I’d suggest starting with Docker Swarm if you’re just getting into container orchestration.",
+        "upvotes": 60
+    },
+    {
+        "postId": 13,
+        "authorId": 34,
+        "content": "Blockchain-based voting systems have a lot of potential. How do you handle vote integrity and prevent double voting?",
+        "upvotes": 80
+    },
+    {
+        "postId": 13,
+        "parentId": 51,
+        "authorId": 13,
+        "content": "We use a combination of smart contracts and cryptographic proofs to ensure that each vote is unique and can only be cast once. The system also provides transparency while keeping votes anonymous.",
+        "upvotes": 75
+    },
+    {
+        "postId": 13,
+        "authorId": 35,
+        "content": "Sounds secure! What’s the throughput like? Can it handle a large number of voters simultaneously?",
+        "upvotes": 65
+    },
+    {
+        "postId": 13,
+        "parentId": 53,
+        "authorId": 13,
+        "content": "Throughput is one of our ongoing challenges. We’re currently optimizing the smart contract logic to improve scalability. Right now, it can handle up to 1000 transactions per second.",
+        "upvotes": 60
+    },
+    {
+        "postId": 14,
+        "authorId": 36,
+        "content": "For getting started with cloud computing, I’d suggest AWS’s free tier. It gives you access to a lot of services and lets you experiment without cost.",
+        "upvotes": 75
+    },
+    {
+        "postId": 14,
+        "authorId": 37,
+        "content": "Also, check out Google Cloud’s tutorials. They have a lot of beginner-friendly content that’s well-structured.",
+        "upvotes": 70
+    },
+    {
+        "postId": 14,
+        "authorId": 38,
+        "content": "Microsoft’s Azure has some great learning paths as well. If you’re considering enterprise solutions, Azure is worth exploring.",
+        "upvotes": 65
+    },
+    {
+        "postId": 14,
+        "parentId": 57,
+        "authorId": 36,
+        "content": "Agreed. Azure’s integration with Microsoft’s other services can be a big plus for companies already using their software.",
+        "upvotes": 60
+    },
+    {
+        "postId": 15,
+        "authorId": 39,
+        "content": "AI-based tools are the future of marketing. How accurate is the content generated by your tool?",
+        "upvotes": 75
+    },
+    {
+        "postId": 15,
+        "parentId": 59,
+        "authorId": 15,
+        "content": "The tool is pretty accurate for general marketing content, but it still requires some human editing to fine-tune the nuances. It’s great for generating ideas and drafts quickly.",
+        "upvotes": 70
+    },
+    {
+        "postId": 15,
+        "authorId": 40,
+        "content": "What algorithms are you using for the natural language processing?",
+        "upvotes": 65
+    },
+    {
+        "postId": 15,
+        "parentId": 61,
+        "authorId": 15,
+        "content": "We’re using a combination of GPT models and fine-tuning them with specific marketing datasets. This allows the tool to generate content that’s tailored to marketing needs.",
+        "upvotes": 60
+    },
+    {
+        "postId": 16,
+        "authorId": 41,
+        "content": "This Kubernetes book is excellent! It really helped me understand the fundamentals and advanced topics alike.",
+        "upvotes": 80
+    },
+    {
+        "postId": 16,
+        "parentId": 1,
+        "authorId": 12,
+        "content": "Glad you found it helpful! Kelsey Hightower is a fantastic teacher, and the examples in the book are very practical.",
+        "upvotes": 70
+    },
+    {
+        "postId": 16,
+        "authorId": 42,
+        "content": "Does the book cover deploying Kubernetes on different cloud providers, or is it more focused on on-premise setups?",
+        "upvotes": 65
+    },
+    {
+        "postId": 16,
+        "parentId": 3,
+        "authorId": 41,
+        "content": "It covers both! There’s a good balance between on-premise and cloud deployments, with specific sections on AWS, GCP, and Azure.",
+        "upvotes": 60
+    },
+    {
+        "postId": 17,
+        "authorId": 43,
+        "content": "I’ve been looking for a personal finance tool like this! How customizable is it? Can I create my own categories for expenses?",
+        "upvotes": 75
+    },
+    {
+        "postId": 17,
+        "parentId": 5,
+        "authorId": 5,
+        "content": "Yes, it’s fully customizable. You can create, edit, and delete categories for your expenses. The tool is designed to be as flexible as possible.",
+        "upvotes": 70
+    },
+    {
+        "postId": 17,
+        "authorId": 44,
+        "content": "How does it integrate with bank accounts? Is the setup process complicated?",
+        "upvotes": 65
+    },
+    {
+        "postId": 17,
+        "parentId": 7,
+        "authorId": 5,
+        "content": "Integration with bank accounts is straightforward. We support Plaid for connecting to most major banks, and the setup process is guided step-by-step within the app.",
+        "upvotes": 60
+    },
+    {
+        "postId": 18,
+        "authorId": 45,
+        "content": "I made the switch from web development to data science, and it was challenging but worth it. Start with learning Python and move onto machine learning frameworks like Scikit-learn.",
+        "upvotes": 80
+    },
+    {
+        "postId": 18,
+        "authorId": 46,
+        "content": "Don’t overlook the importance of math, especially linear algebra and calculus. They’re critical for understanding machine learning algorithms.",
+        "upvotes": 75
+    },
+    {
+        "postId": 18,
+        "authorId": 47,
+        "content": "I’d also recommend focusing on data visualization tools like Matplotlib and Seaborn. Being able to visualize your data is crucial for communicating your findings.",
+        "upvotes": 70
+    },
+    {
+        "postId": 18,
+        "parentId": 10,
+        "authorId": 45,
+        "content": "Great point! Data visualization is often overlooked, but it’s a key skill in data science.",
+        "upvotes": 65
+    },
+    {
+        "postId": 19,
+        "authorId": 48,
+        "content": "This new JavaScript library looks promising. How does it handle event delegation?",
+        "upvotes": 55
+    },
+    {
+        "postId": 19,
+        "parentId": 12,
+        "authorId": 7,
+        "content": "Event delegation is handled similarly to jQuery, but it’s more efficient thanks to modern JavaScript features. You can delegate events to parent elements easily.",
+        "upvotes": 50
+    },
+    {
+        "postId": 19,
+        "authorId": 49,
+        "content": "What’s the learning curve like compared to jQuery? I’m considering switching, but I don’t want to spend too much time retraining my team.",
+        "upvotes": 65
+    },
+    {
+        "postId": 19,
+        "parentId": 14,
+        "authorId": 7,
+        "content": "The learning curve is minimal if you’re already familiar with jQuery. The syntax is intuitive, and the documentation is comprehensive, making the transition smooth.",
+        "upvotes": 60
+    },
+    {
+        "postId": 20,
+        "authorId": 50,
+        "content": "Staying updated with tech trends is a full-time job in itself! I follow a mix of newsletters, blogs, and Twitter accounts. Any recommendations for specific newsletters?",
+        "upvotes": 75
+    },
+    {
+        "postId": 20,
+        "authorId": 51,
+        "content": "I’d recommend 'The Pragmatic Engineer' newsletter. It’s full of practical advice and insights into the tech industry.",
+        "upvotes": 70
+    },
+    {
+        "postId": 20,
+        "authorId": 52,
+        "content": "I’ve found 'Techmeme' to be a great resource for staying on top of the latest news. It curates articles from various sources into a daily digest.",
+        "upvotes": 65
+    },
+    {
+        "postId": 20,
+        "parentId": 17,
+        "authorId": 50,
+        "content": "Thanks for the recommendations! I’ll check them out. I’ve been looking for something more curated to save time.",
+        "upvotes": 60
+    },
+    {
+        "postId": 21,
+        "authorId": 53,
+        "content": "Your machine learning project for predicting stock prices sounds intriguing! What kind of data are you using for the predictions?",
+        "upvotes": 80
+    },
+    {
+        "postId": 21,
+        "parentId": 19,
+        "authorId": 9,
+        "content": "I’m using historical stock price data along with macroeconomic indicators like interest rates and inflation. The model also considers social media sentiment to improve accuracy.",
+        "upvotes": 75
+    },
+    {
+        "postId": 21,
+        "authorId": 54,
+        "content": "Are you planning to make the model open-source? I’d love to contribute and see how it works under the hood.",
+        "upvotes": 70
+    },
+    {
+        "postId": 21,
+        "parentId": 21,
+        "authorId": 9,
+        "content": "Yes, I’m planning to open-source the project once I’ve refined the model a bit more. Contributions are welcome!",
+        "upvotes": 65
+    },
+    {
+        "postId": 22,
+        "authorId": 55,
+        "content": "Optimizing React performance is a constant challenge. One tip is to avoid passing new object or array references as props unless necessary.",
+        "upvotes": 85
+    },
+    {
+        "postId": 22,
+        "parentId": 23,
+        "authorId": 26,
+        "content": "Good advice! I’ve seen significant performance improvements by memoizing objects and arrays that are passed as props.",
+        "upvotes": 75
+    },
+    {
+        "postId": 22,
+        "authorId": 56,
+        "content": "Using code splitting with React.lazy can also help reduce the initial load time of large applications.",
+        "upvotes": 70
+    },
+    {
+        "postId": 22,
+        "parentId": 25,
+        "authorId": 26,
+        "content": "Definitely! Code splitting has made a big difference in my projects, especially when combined with dynamic imports.",
+        "upvotes": 65
+    },
+    {
+        "postId": 23,
+        "authorId": 57,
+        "content": "This new CSS framework seems interesting. Does it offer built-in support for grid layouts, or do you need to rely on Flexbox?",
+        "upvotes": 60
+    },
+    {
+        "postId": 23,
+        "parentId": 27,
+        "authorId": 11,
+        "content": "It has built-in support for both grid and Flexbox. The documentation provides detailed examples for each layout type, making it easy to implement.",
+        "upvotes": 55
+    },
+    {
+        "postId": 23,
+        "authorId": 58,
+        "content": "I’ve been looking for a Tailwind alternative that focuses more on accessibility. How does this new framework handle accessibility out of the box?",
+        "upvotes": 65
+    },
+    {
+        "postId": 23,
+        "parentId": 29,
+        "authorId": 11,
+        "content": "Accessibility is one of the core focuses of this framework. It includes ARIA attributes by default and offers utilities for creating accessible components without extra configuration.",
+        "upvotes": 60
+    },
+    {
+        "postId": 24,
+        "authorId": 59,
+        "content": "For DevOps automation, I can’t recommend Terraform enough. It’s incredibly versatile and works well with most cloud providers.",
+        "upvotes": 80
+    },
+    {
+        "postId": 24,
+        "parentId": 31,
+        "authorId": 31,
+        "content": "Agreed! Terraform has streamlined our infrastructure management and made it easier to maintain consistency across environments.",
+        "upvotes": 75
+    },
+    {
+        "postId": 24,
+        "authorId": 60,
+        "content": "If you’re using Kubernetes, consider using Helm for managing your Kubernetes applications. It simplifies deployments and rollbacks significantly.",
+        "upvotes": 70
+    },
+    {
+        "postId": 24,
+        "parentId": 33,
+        "authorId": 31,
+        "content": "Helm has been a game-changer for us. It’s made managing our Kubernetes deployments much more manageable.",
+        "upvotes": 65
+    },
+    {
+        "postId": 25,
+        "authorId": 61,
+        "content": "Blockchain-based voting systems are fascinating. How do you ensure the privacy of the voters?",
+        "upvotes": 85
+    },
+    {
+        "postId": 25,
+        "parentId": 35,
+        "authorId": 13,
+        "content": "We use zero-knowledge proofs to ensure that votes are anonymous but still verifiable. This allows us to maintain privacy without sacrificing transparency.",
+        "upvotes": 80
+    },
+    {
+        "postId": 25,
+        "authorId": 62,
+        "content": "What kind of infrastructure do you need to run this system? Is it feasible for large-scale elections?",
+        "upvotes": 70
+    },
+    {
+        "postId": 25,
+        "parentId": 37,
+        "authorId": 13,
+        "content": "The infrastructure requirements depend on the scale. For large-scale elections, you’d need a robust network with nodes distributed across multiple regions to ensure reliability and reduce latency.",
+        "upvotes": 65
+    },
+    {
+        "postId": 26,
+        "authorId": 63,
+        "content": "AWS’s free tier is an excellent way to get started with cloud computing. It provides access to a wide range of services without any upfront costs.",
+        "upvotes": 75
+    },
+    {
+        "postId": 26,
+        "parentId": 39,
+        "authorId": 36,
+        "content": "Absolutely! I started with AWS’s free tier, and it’s a great way to experiment with different cloud services.",
+        "upvotes": 70
+    },
+    {
+        "postId": 26,
+        "authorId": 64,
+        "content": "Google Cloud’s BigQuery is also worth checking out. It’s a powerful data warehouse solution, and the free tier offers enough resources to get started.",
+        "upvotes": 65
+    },
+    {
+        "postId": 26,
+        "parentId": 41,
+        "authorId": 36,
+        "content": "BigQuery is fantastic, especially for analyzing large datasets. It’s definitely worth exploring if you’re into data science or big data.",
+        "upvotes": 60
+    },
+    {
+        "postId": 27,
+        "authorId": 65,
+        "content": "AI-based tools are revolutionizing marketing. How does your tool handle content personalization?",
+        "upvotes": 85
+    },
+    {
+        "postId": 27,
+        "parentId": 43,
+        "authorId": 15,
+        "content": "Our tool uses machine learning algorithms to analyze user data and tailor content recommendations accordingly. It’s designed to deliver highly personalized marketing content.",
+        "upvotes": 80
+    },
+    {
+        "postId": 27,
+        "authorId": 66,
+        "content": "What about SEO optimization? Does your tool generate content that’s optimized for search engines?",
+        "upvotes": 70
+    },
+    {
+        "postId": 27,
+        "parentId": 45,
+        "authorId": 15,
+        "content": "Yes, SEO is a key feature. The tool analyzes keyword trends and generates content that’s optimized for search engines, helping to improve visibility and rankings.",
+        "upvotes": 65
+    },
+    {
+        "postId": 28,
+        "authorId": 67,
+        "content": "Best practices for securing web applications start with implementing strong authentication mechanisms, like two-factor authentication (2FA).",
+        "upvotes": 85
+    },
+    {
+        "postId": 28,
+        "parentId": 47,
+        "authorId": 16,
+        "content": "I’d also recommend encrypting all sensitive data both in transit and at rest. Use SSL/TLS for data in transit and strong encryption standards for data at rest.",
+        "upvotes": 75
+    },
+    {
+        "postId": 28,
+        "authorId": 68,
+        "content": "Regular security audits and penetration testing are crucial for identifying and fixing vulnerabilities before they can be exploited.",
+        "upvotes": 70
+    },
+    {
+        "postId": 28,
+        "parentId": 49,
+        "authorId": 16,
+        "content": "Absolutely! Conducting regular security assessments should be a part of every development cycle to ensure ongoing protection.",
+        "upvotes": 65
+    }
+]

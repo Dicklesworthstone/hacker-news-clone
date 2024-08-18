@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Comment.belongsTo(models.Post, { foreignKey: 'postId', onDelete: 'CASCADE' });
       Comment.belongsTo(models.User, { as: 'author', foreignKey: 'authorId' });
-      Comment.belongsTo(models.Comment, { as: 'parent', foreignKey: 'parentId' });
+      Comment.belongsTo(models.Comment, { as: 'parent', foreignKey: 'parentId', onDelete: 'CASCADE' });
       Comment.hasMany(models.Comment, { as: 'replies', foreignKey: 'parentId', onDelete: 'CASCADE' });
       Comment.hasMany(models.Flag, { foreignKey: 'commentId' });
     }
@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     parentId: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: true,  // ParentId can be null for top-level comments
     },
     authorId: {
       type: DataTypes.INTEGER,
@@ -27,11 +27,11 @@ module.exports = (sequelize, DataTypes) => {
     },
     content: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: false,  // Markdown content is supported
     },
     upvotes: {
       type: DataTypes.INTEGER,
-      defaultValue: 0,
+      defaultValue: 0,  // Keep for caching purposes, but dynamically calculate as needed
     },
     flags: {
       type: DataTypes.INTEGER,

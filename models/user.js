@@ -28,7 +28,11 @@ module.exports = (sequelize, DataTypes) => {
     password: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+    },
+    biography: {
+      type: DataTypes.TEXT,  // Markdown-supported biography field
+      allowNull: true,
+    },
   }, {
     sequelize,
     modelName: 'User',

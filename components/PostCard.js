@@ -3,8 +3,9 @@
 import { Card, Avatar, Typography, Tag as AntTag, Tooltip } from 'antd';
 import { LikeOutlined, UserOutlined } from '@ant-design/icons';
 import Link from 'next/link';
+import { marked } from 'marked';
 
-const { Title, Text, Paragraph } = Typography;
+const { Title, Text } = Typography;
 
 export default function PostCard({ post }) {
     return (
@@ -29,12 +30,10 @@ export default function PostCard({ post }) {
                             </Link>
                         </Text>
                         <div className="mt-2">
-                            <Paragraph ellipsis={{ rows: 3, expandable: true, symbol: 'more' }}>
-                                {post.content}
-                            </Paragraph>
+                            <div dangerouslySetInnerHTML={{ __html: marked(post.content) }} />
                         </div>
                         <div className="mt-2">
-                            <Text className="mr-2">Category: {post.category}</Text>
+                            <Text className="mr-2">Category: {post.category.name}</Text>
                             {post.tags && post.tags.length > 0 && (
                                 <div className="mt-2">
                                     {post.tags.map(tag => (

@@ -1,4 +1,3 @@
-// models/postTag.js (junction table for many-to-many relationships between Post and Tag)
 'use strict';
 
 module.exports = (sequelize, DataTypes) => {
@@ -9,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         model: 'Post',
         key: 'id',
       },
+      allowNull: false,
     },
     tagId: {
       type: DataTypes.INTEGER,
@@ -16,7 +16,21 @@ module.exports = (sequelize, DataTypes) => {
         model: 'Tag',
         key: 'id',
       },
+      allowNull: false,
     },
+  }, {
+    indexes: [
+      {
+        unique: true,
+        fields: ['postId', 'tagId']
+      },
+      {
+        fields: ['postId']
+      },
+      {
+        fields: ['tagId']
+      }
+    ],
   });
 
   return PostTag;

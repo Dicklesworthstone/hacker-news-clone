@@ -1,10 +1,8 @@
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
 const Sequelize = require('sequelize');
+const path = require('path');
 const process = require('process');
-const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
@@ -16,22 +14,37 @@ if (config.use_env_variable) {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
-// Step 1: Import all models
-const modelFiles = fs.readdirSync(__dirname)
-  .filter(file => {
-    return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
-  });
+// Explicitly import each model
+const User = require('./user')(sequelize, Sequelize.DataTypes);
+const Post = require('./post')(sequelize, Sequelize.DataTypes);
+const Comment = require('./comment')(sequelize, Sequelize.DataTypes);
+const Upvote = require('./upvote')(sequelize, Sequelize.DataTypes);
+const Job = require('./job')(sequelize, Sequelize.DataTypes);
+const Tag = require('./tag')(sequelize, Sequelize.DataTypes);
+const Flag = require('./flag')(sequelize, Sequelize.DataTypes);
+const PostTag = require('./postTag')(sequelize, Sequelize.DataTypes);
+const Category = require('./category')(sequelize, Sequelize.DataTypes);
+const Message = require('./message')(sequelize, Sequelize.DataTypes);
+const Notification = require('./notification')(sequelize, Sequelize.DataTypes);
+const Session = require('./session')(sequelize, Sequelize.DataTypes);
 
-for (const file of modelFiles) {
-  console.log(`Importing model from file: ${file}`);  // Logging for debugging
-  const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
-  db[model.name] = model;
-}
+// Assign models to the db object
+db.User = User;
+db.Post = Post;
+db.Comment = Comment;
+db.Upvote = Upvote;
+db.Job = Job;
+db.Tag = Tag;
+db.Flag = Flag;
+db.PostTag = PostTag;
+db.Category = Category;
+db.Message = Message;
+db.Notification = Notification;
+db.Session = Session;
 
-// Step 2: Set up associations after all models are imported
+// Setup associations for each model
 Object.keys(db).forEach(modelName => {
   if (db[modelName].associate) {
-    console.log(`Associating model: ${modelName}`);  // Logging for debugging
     db[modelName].associate(db);
   }
 });

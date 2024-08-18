@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     content: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: false, // Supports markdown content
     },
     authorId: {
       type: DataTypes.INTEGER,
@@ -28,19 +28,14 @@ module.exports = (sequelize, DataTypes) => {
     },
     upvotes: {
       type: DataTypes.INTEGER,
-      defaultValue: 0,
+      defaultValue: 0, // Cache value; dynamically calculated based on upvotes.json
     },
     flags: {
       type: DataTypes.INTEGER,
       defaultValue: 0,
     },
-    tags: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    category: {
-      type: DataTypes.ENUM('Show HN', 'Ask HN', 'Job', 'General'),
-      defaultValue: 'General',
+    categoryId: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
   }, {

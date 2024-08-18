@@ -16,15 +16,3 @@ export default function Document() {
     </Html>
   );
 }
-
-// Try commenting out the custom getInitialProps logic if it's causing issues
-Document.getInitialProps = async (ctx) => {
-  const originalRenderPage = ctx.renderPage;
-
-  // Attempt without any styled-components or emotion logic first
-  const initialProps = await Document.getInitialProps(ctx);
-
-  return {
-    ...initialProps,
-  };
-};

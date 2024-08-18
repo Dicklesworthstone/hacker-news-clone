@@ -5,6 +5,7 @@ module.exports = (sequelize, DataTypes) => {
   class Upvote extends Model {
     static associate(models) {
       Upvote.belongsTo(models.Post, { foreignKey: 'postId', onDelete: 'CASCADE' });
+      Upvote.belongsTo(models.Comment, { foreignKey: 'commentId', onDelete: 'CASCADE' });
       Upvote.belongsTo(models.User, { foreignKey: 'userId', onDelete: 'CASCADE' });
     }
   }
@@ -12,7 +13,11 @@ module.exports = (sequelize, DataTypes) => {
   Upvote.init({
     postId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true, // Either postId or commentId will be set
+    },
+    commentId: {
+      type: DataTypes.INTEGER,
+      allowNull: true, // Either commentId or postId will be set
     },
     userId: {
       type: DataTypes.INTEGER,
@@ -20,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     karma: {
       type: DataTypes.INTEGER,
-      defaultValue: 0,
+      defaultValue: 0, // This could represent the weight of the upvote
     },
   }, {
     sequelize,
